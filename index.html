@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal blog - thoughts, projects, and experiences">
+    <title>0ufoc</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script src="script.js" defer></script>
+    <header class="site-header">
+        <div class="container">
+            <h1 class="site-title"><a href="index.html">My Personal Blog</a></h1>
+            <p class="site-tagline">Thoughts, projects, and experiences</p>
+            <nav class="site-nav">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="posts">
+            <article class="post-card">
+                <header class="post-header">
+                    <h2 class="post-title"><a href="posts/first-post.html">Getting Started with My Blog</a></h2>
+                    <time class="post-date" datetime="2026-10-12">October 12, 2026</time>
+                </header>
+                <div class="post-excerpt">
+                    <p>Welcome to my new personal blog! I'm excited to share my thoughts, projects, and learning journey with you. This blog is built as a simple static site using HTML, CSS, and JavaScript — no frameworks, no build steps, just clean code.</p>
+                </div>
+                <footer class="post-footer">
+                    <a href="posts/first-post.html" class="read-more">Read more →</a>
+                    <span class="post-tags">
+                        <span class="tag">intro</span>
+                        <span class="tag">meta</span>
+                    </span>
+                </footer>
+            </article>
+
+            <article class="post-card">
+                <header class="post-header">
+                    <h2 class="post-title"><a href="posts/learning-html-css.html">Learning HTML & CSS Fundamentals</a></h2>
+                    <time class="post-date" datetime="2026-10-10">October 10, 2026</time>
+                </header>
+                <div class="post-excerpt">
+                    <p>Starting my web development journey by learning the fundamentals of HTML and CSS. Here's what I've discovered about semantic markup, the box model, and creating responsive layouts that work across all devices.</p>
+                </div>
+                <footer class="post-footer">
+                    <a href="posts/learning-html-css.html" class="read-more">Read more →</a>
+                    <span class="post-tags">
+                        <span class="tag">html</span>
+                        <span class="tag">css</span>
+                        <span class="tag">learning</span>
+                    </span>
+                </footer>
+            </article>
+
+            <article class="post-card">
+                <header class="post-header">
+                    <h2 class="post-title"><a href="posts/static-site-generators.html">Why I Chose a Static Site</a></h2>
+                    <time class="post-date" datetime="2026-10-08">October 8, 2026</time>
+                </header>
+                <div class="post-excerpt">
+                    <p>After exploring various blogging platforms, I decided to build my own static site. No databases, no server-side rendering, no complex build pipelines — just files that work everywhere. Here's why this approach works for me.</p>
+                </div>
+                <footer class="post-footer">
+                    <a href="posts/static-site-generators.html" class="read-more">Read more →</a>
+                    <span class="post-tags">
+                        <span class="tag">architecture</span>
+                        <span class="tag">static-sites</span>
+                    </span>
+                </footer>
+            </article>
+        </section>
+
+        <nav class="pagination">
+            <span class="page-info">Page 1 of 1</span>
+        </nav>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 My Personal Blog. Built with HTML, CSS & JavaScript.</p>
+            <nav class="footer-nav">
+                <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
+                <a href="mailto:hello@example.com">Email</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

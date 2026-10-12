@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Starting my web development journey by learning the fundamentals of HTML and CSS. Here's what I've discovered about semantic markup, the box model, and creating responsive layouts.">
+    <title>0ufoc</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <script src="../script.js" defer></script>
+    <header class="site-header">
+        <div class="container">
+            <h1 class="site-title"><a href="../index.html">My Personal Blog</a></h1>
+            <p class="site-tagline">Thoughts, projects, and experiences</p>
+            <nav class="site-nav">
+                <a href="../index.html">Home</a>
+                <a href="../about.html">About</a>
+                <a href="../projects.html">Projects</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article>
+            <header class="article-header">
+                <h1 class="article-title">Learning HTML & CSS Fundamentals</h1>
+                <div class="article-meta">
+                    <time datetime="2026-10-10">October 10, 2026</time>
+                    <span class="article-tags">
+                        <span class="tag">html</span>
+                        <span class="tag">css</span>
+                        <span class="tag">learning</span>
+                    </span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <p>Starting my web development journey by learning the fundamentals of HTML and CSS. Here's what I've discovered about semantic markup, the box model, and creating responsive layouts that work across all devices.</p>
+
+                <h2>HTML: The Structure</h2>
+                <p>HTML (HyperText Markup Language) provides the structure and meaning of web content. The key insight for me was understanding <strong>semantic HTML</strong> — using elements that describe their purpose rather than just their appearance.</p>
+
+                <h3>Semantic Elements I Use Daily</h3>
+                <ul>
+                    <li><code><header></code>, <code><footer></code>, <code><main></code> — Page structure</li>
+                    <li><code><article></code>, <code><section></code>, <code><aside></code> — Content grouping</li>
+                    <li><code><nav></code> — Navigation</li>
+                    <li><code><time></code> — Dates with machine-readable format</li>
+                </ul>
+
+                <pre><code><article>
+  <header>
+    <h1>Post Title</h1>
+    <time datetime="2026-10-12">October 12, 2026</time>
+  </header>
+  <p>Content goes here...</p>
+</article></code></pre>
+
+                <h2>CSS: The Presentation</h2>
+                <p>CSS (Cascading Style Sheets) handles the visual presentation. The concepts that clicked for me:</p>
+
+                <h3>The Box Model</h3>
+                <p>Every element is a box with content, padding, border, and margin. Understanding <code>box-sizing: border-box</code> was a game-changer — it makes sizing predictable.</p>
+
+                <pre><code>*, *::before, *::after {
+  box-sizing: border-box;
+}</code></pre>
+
+                <h3>Flexbox for One-Dimensional Layouts</h3>
+                <p>Flexbox makes it easy to align items in a row or column:</p>
+
+                <pre><code>.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}</code></pre>
+
+                <h3>CSS Grid for Two-Dimensional Layouts</h3>
+                <p>Grid is perfect for page layouts and complex arrangements:</p>
+
+                <pre><code>.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}</code></pre>
+
+                <h3>Custom Properties (CSS Variables)</h3>
+                <p>Define values once, use everywhere. Makes theming and maintenance easy:</p>
+
+                <pre><code>:root {
+  --color-accent: #2563eb;
+  --space-md: 1rem;
+  --font-sans: system-ui, sans-serif;
+}
+
+.button {
+  background: var(--color-accent);
+  padding: var(--space-md);
+  font-family: var(--font-sans);
+}</code></pre>
+
+                <h2>Responsive Design</h2>
+                <p>Making sites work on all screen sizes using mobile-first approach:</p>
+
+                <pre><code>/* Mobile first - base styles */
+.container {
+  padding: 1rem;
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .container {
+    padding: 2rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}</code></pre>
+
+                <h2>Resources That Helped</h2>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener">MDN HTML Reference</a> — The definitive guide</li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener">MDN CSS Reference</a> — Comprehensive CSS docs</li>
+                    <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" rel="noopener">CSS-Tricks Flexbox Guide</a> — Visual flexbox reference</li>
+                    <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank" rel="noopener">CSS-Tricks Grid Guide</a> — Visual grid reference</li>
+                    <li><a href="https://web.dev/learn/" target="_blank" rel="noopener">web.dev Learn</a> — Modern web development courses</li>
+                </ul>
+
+                <h2>What's Next</h2>
+                <p>Now that I have the basics down, I'm exploring:</p>
+                <ul>
+                    <li>CSS Container Queries for component-level responsiveness</li>
+                    <li>Cascade Layers for better style organization</li>
+                    <li>CSS Anchor Positioning for tooltips and popovers</li>
+                    <li>View Transitions API for smooth page transitions</li>
+                </ul>
+
+                <p>The web platform keeps evolving, and there's always something new to learn. That's what makes it exciting!</p>
+            </div>
+        </article>
+
+        <nav class="pagination">
+            <a href="../index.html" class="prev">← Back to Home</a>
+        </nav>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 My Personal Blog. Built with HTML, CSS & JavaScript.</p>
+            <nav class="footer-nav">
+                <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
+                <a href="mailto:hello@example.com">Email</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

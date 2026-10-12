@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="After exploring various blogging platforms, I decided to build my own static site. No databases, no server-side rendering, no complex build pipelines — just files that work everywhere.">
+    <title>0ufoc</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <script src="../script.js" defer></script>
+    <header class="site-header">
+        <div class="container">
+            <h1 class="site-title"><a href="../index.html">My Personal Blog</a></h1>
+            <p class="site-tagline">Thoughts, projects, and experiences</p>
+            <nav class="site-nav">
+                <a href="../index.html">Home</a>
+                <a href="../about.html">About</a>
+                <a href="../projects.html">Projects</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article>
+            <header class="article-header">
+                <h1 class="article-title">Why I Chose a Static Site</h1>
+                <div class="article-meta">
+                    <time datetime="2026-10-08">October 8, 2026</time>
+                    <span class="article-tags">
+                        <span class="tag">architecture</span>
+                        <span class="tag">static-sites</span>
+                    </span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <p>After exploring various blogging platforms, I decided to build my own static site. No databases, no server-side rendering, no complex build pipelines — just files that work everywhere. Here's why this approach works for me.</p>
+
+                <h2>What Is a Static Site?</h2>
+                <p>A static site consists of pre-built HTML, CSS, and JavaScript files served directly to the browser. There's no server-side processing, no database queries, no dynamic rendering on each request. The files are generated once (at build time) and served identically to every visitor.</p>
+
+                <h2>The Alternatives I Considered</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Platform</th>
+                            <th>Pros</th>
+                            <th>Cons</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>WordPress</td>
+                            <td>Feature-rich, huge ecosystem, easy for non-technical users</td>
+                            <td>PHP/MySQL required, security concerns, performance overhead, frequent updates</td>
+                        </tr>
+                        <tr>
+                            <td>Ghost</td>
+                            <td>Modern, fast, great writing experience</td>
+                            <td>Node.js server required, paid hosting or self-hosting complexity</td>
+                        </tr>
+                        <tr>
+                            <td>Medium</td>
+                            <td>Zero setup, built-in audience, beautiful editor</td>
+                            <td>No ownership, paywall issues, limited customization, platform risk</td>
+                        </tr>
+                        <tr>
+                            <td>Jekyll/Hugo</td>
+                            <td>Static output, mature, GitHub Pages native</td>
+                            <td>Ruby/Go dependency, build step, template learning curve</td>
+                        </tr>
+                        <tr>
+                            <td>Next.js/Astro</td>
+                            <td>Modern, powerful, great DX</td>
+                            <td>Complex build pipeline, overkill for simple blogs, JS fatigue</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>Why Plain Static Files Won</h2>
+
+                <h3>1. Zero Dependencies</h3>
+                <p>No <code>package.json</code>, no <code>node_modules</code>, no build tools, no version conflicts. The site <em>is</em> the source code. I can open <code>index.html</code> in any browser and it works.</p>
+
+                <h3>2. True Ownership</h3>
+                <p>My content lives in plain HTML files in a git repository. No vendor lock-in, no export hassles, no API changes breaking my content. If GitHub Pages disappears, I push to Netlify, Vercel, or any static host in minutes.</p>
+
+                <h3>3. Performance by Default</h3>
+                <p>Static files served from a global CDN (like GitHub Pages, Cloudflare, Netlify) are as fast as it gets. No server cold starts, no database queries, no rendering time. First Contentful Paint is essentially network latency.</p>
+
+                <h3>4. Security Simplicity</h3>
+                <p>No server-side code means no injection vulnerabilities, no authentication bypasses, no CMS exploits. The attack surface is essentially "serve static files" — a solved problem.</p>
+
+                <h3>5. Cost: Free</h3>
+                <p>GitHub Pages, Netlify, Vercel, Cloudflare Pages, GitLab Pages — all offer generous free tiers for static sites. No server costs, no database costs, no bandwidth worries for a personal blog.</p>
+
+                <h3>6. Longevity</h3>
+                <p>HTML is the web's native format. The first website from 1991 still renders today. My blog posts will be readable in 20 years without migration, without a compatible runtime, without a specific platform existing.</p>
+
+                <h2>The Trade-offs</h2>
+                <p>It's not all perfect. Here's what I give up:</p>
+                <ul>
+                    <li><strong>Dynamic features:</strong> No comments (use Webmentions or a third-party service), no search (use Algolia or static search), no user accounts</li>
+                    <li><strong>Content editing:</strong> No visual editor — I write HTML directly (or Markdown with a simple parser)</li>
+                    <li><strong>Collaboration:</strong> Non-technical contributors need git/HTML knowledge</li>
+                    <li><strong>Scale:</strong> Not suitable for thousands of pages without a build step (but I won't have thousands of posts)</li>
+                </ul>
+
+                <h2>My Setup</h2>
+                <p>For this blog, I keep it intentionally simple:</p>
+                <pre><code>blog/
+├── index.html          # Homepage with post list
+├── about.html          # About page
+├── projects.html       # Projects showcase
+├── styles.css          # All styles
+├── script.js           # Minimal JS (dark mode, etc.)
+└── posts/
+    ├── first-post.html
+    ├── learning-html-css.html
+    └── static-site-generators.html</code></pre>
+
+                <h2>Adding a New Post</h2>
+                <ol>
+                    <li>Create a new <code>.html</code> file in <code>posts/</code></li>
+                    <li>Follow the existing article template</li>
+                    <li>Add a link to it on <code>index.html</code></li>
+                    <li>Commit and push — live in seconds</li>
+                </ol>
+
+                <h2>When I'd Reconsider</h2>
+                <p>If my needs change, I'd look at:</p>
+                <ul>
+                    <li><strong>Astro:</strong> If I want component-based authoring with static output</li>
+                    <li><strong>11ty:</strong> If I want a build step for templating but static output</li>
+                    <li><strong>Ghost:</strong> If I need a proper CMS for a team</li>
+                </ul>
+
+                <p>But for now? Static files, git, and a CDN. Simple, fast, and mine.</p>
+            </div>
+        </article>
+
+        <nav class="pagination">
+            <a href="../index.html" class="prev">← Back to Home</a>
+        </nav>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 My Personal Blog. Built with HTML, CSS & JavaScript.</p>
+            <nav class="footer-nav">
+                <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
+                <a href="mailto:hello@example.com">Email</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
