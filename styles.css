@@ -11,12 +11,12 @@
     --color-bg-alt: #ffffff;
     --color-text: #1a1a2e;
     --color-text-muted: #6b6b7b;
-    --color-accent: #2563eb;
-    --color-accent-hover: #1d4ed8;
+    --color-accent: #636363;
+    --color-accent-hover: #525252;
     --color-border: #e5e5e5;
     --color-code-bg: #f4f4f5;
-    --color-tag-bg: #eef2ff;
-    --color-tag-text: #3730a3;
+    --color-tag-bg: #f0f0f0;
+    --color-tag-text: #333333;
 
     /* Spacing scale */
     --space-xs: 0.25rem;
@@ -27,8 +27,8 @@
     --space-2xl: 3rem;
 
     /* Typography */
-    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, monospace;
+    --font-sans: 'IBM Plex Mono', 'Courier New', Courier, monospace;
+    --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, monospace;
     --font-size-sm: 0.875rem;
     --font-size-base: 1rem;
     --font-size-lg: 1.125rem;
@@ -52,16 +52,16 @@
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
     :root {
-        --color-bg: #0f0f1a;
-        --color-bg-alt: #1a1a2e;
-        --color-text: #f1f1f5;
-        --color-text-muted: #9ca3af;
-        --color-accent: #60a5fa;
-        --color-accent-hover: #93c5fd;
-        --color-border: #374151;
-        --color-code-bg: #1e1e2e;
-        --color-tag-bg: #1e1b4b;
-        --color-tag-text: #c7d2fe;
+        --color-bg: #0a0a0a;
+        --color-bg-alt: #121212;
+        --color-text: #e0e0e0;
+        --color-text-muted: #b0b0b0;
+        --color-accent: #757575;
+        --color-accent-hover: #616161;
+        --color-border: #2d2d2d;
+        --color-code-bg: #1e1e1e;
+        --color-tag-bg: #2d2d2d;
+        --color-tag-text: #e0e0e0;
     }
 }
 
